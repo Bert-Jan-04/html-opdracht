@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+</head>
+<body>
+
+<h1>ASK ME EVERYTHING</h1>
+
+<form name="contact" action="./send.html" method="POST">
+
+  <div>
+    <label for="firstname">Firstname:</label><br>
+    <input 
+      type="text" 
+      id="firstname" 
+      name="firstname" 
+      placeholder="Your firstname please" 
+      required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label><br>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Email address" 
+      required>
+  </div>
+
+  <div>
+    <label for="type">Type of message:</label><br>
+    <select id="type" name="type" required>
+      <option value="complain">Complain</option>
+      <option value="suggestion" selected>Suggestion</option>
+      <option value="question">Question</option>
+    </select>
+  </div>
+
+ 
+  <div>
+    <label for="password">Password:</label><br>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Choose a password"
+      required>
+  </div>
+
+  <!-- Message textarea -->
+  <div>
+    <label for="message">Your message:</label><br>
+    <textarea 
+      id="message" 
+      name="message" 
+      placeholder="Write your message here..." 
+      rows="5" 
+      cols="30" 
+      required></textarea>
+  </div>
+
+  <div>
+    <span>Newsletter?</span><br>
+    
+    <label>
+      <input 
+        type="radio" 
+        name="subscribe" 
+        value="yes" 
+        checked>
+      Yes
+    </label>
+
+    <label>
+      <input 
+        type="radio" 
+        name="subscribe" 
+        value="no">
+      No
+    </label>
+  </div>
+
+  <div style="margin-top:10px;">
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+  </div>
+
+</form>
+
+</body>
+</html>
+
+<button type="button" onclick="showAlert()">Click me!</button>
+<script>
+  function showAlert() {
+    alert("Hello! This is your first JavaScript alert 🤖");
+  }
+</script>
+
