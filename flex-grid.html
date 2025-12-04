@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 4 – Flex & Grid</title>
+    <link rel="stylesheet" href="flex-grid.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Opdracht 4 – Flexbox &amp; Grid</h1>
+      <nav>
+        <a href="index.html">← Terug naar home</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- FLEXBOX GALLERY -->
+      <section class="section">
+        <h2>Flexbox Gallery</h2>
+        <p>
+          Hieronder staan zes items naast elkaar in een flex-container.
+          Maak je scherm smaller of breder en kijk wat er gebeurt.
+        </p>
+
+        <div class="flex-gallery">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+          <div class="flex-item">Item 4</div>
+          <div class="flex-item">Item 5</div>
+          <div class="flex-item">Item 6</div>
+        </div>
+      </section>
+
+      <!-- GRID GALLERY -->
+      <section class="section">
+        <h2>Grid Gallery</h2>
+        <p>
+          Deze gallery gebruikt CSS Grid met twee rijen en drie kolommen.
+        </p>
+
+        <div class="grid-gallery">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+          <div class="grid-item">Item 4</div>
+          <div class="grid-item">Item 5</div>
+          <div class="grid-item">Item 6</div>
+        </div>
+      </section>
+
+      <!-- UITLEG MARGIN/PADDING ETC. -->
+      <section class="section">
+        <h2>Uitleg: margin, padding, width, height, kleur &amp; border</h2>
+
+        <div class="explain-box">
+          <p><strong>margin</strong> – ruimte <em>buiten</em> het element. Zorgt voor afstand tot andere elementen.</p>
+          <p><strong>padding</strong> – ruimte <em>binnen</em> het element, tussen de inhoud en de rand.</p>
+          <p><strong>width / height</strong> – bepalen de breedte en hoogte van een blok.</p>
+          <p><strong>color</strong> – de tekstkleur van het element.</p>
+          <p><strong>background-color</strong> – de achtergrondkleur achter de tekst.</p>
+          <p><strong>border</strong> – een rand rondom het element. Je kunt dikte, stijl en kleur instellen.</p>
+        </div>
+      </section>
+
+      <!-- POSITION DEMO -->
+      <section class="section">
+        <h2>Experiment met <code>position</code></h2>
+
+        <p>
+          Hieronder worden verschillende waarden van <code>position</code> gebruikt.
+          Scroll en verander de schermgrootte om het effect te zien.
+        </p>
+
+        <div class="position-demo">
+          <div class="pos-box static-box">
+            <strong>static</strong><br>
+            Dit is de standaardpositie. Het element volgt gewoon de normale documentstroom.
+          </div>
+
+          <div class="pos-box relative-box">
+            <strong>relative</strong><br>
+            Staat op de normale plek, maar kan met <code>top</code> / <code>left</code> een beetje verschoven worden.
+          </div>
+
+          <div class="pos-wrapper">
+            <div class="pos-box absolute-box">
+              <strong>absolute</strong><br>
+              Dit element is absoluut gepositioneerd binnen de grijze wrapper.
+            </div>
+            <p>
+              De grijze container hier heeft <code>position: relative</code>. Het blauwe blokje daarbinnen
+              gebruikt <code>position: absolute</code> en wordt dan ten opzichte van deze container geplaatst.
+            </p>
+          </div>
+
+          <div class="pos-box sticky-box">
+            <strong>sticky</strong><br>
+            Dit element blijft “plakken” bovenaan wanneer je er langs scrolt.
+          </div>
+
+          <p class="long-text">
+            <strong>fixed</strong> – De knop rechtsonder in het scherm gebruikt <code>position: fixed</code>.
+            Die blijft altijd op dezelfde plek in beeld, ook als je scrolt.  
+            <br><br>
+            <strong>inherit</strong> – Een element met <code>position: inherit</code> neemt de position-waarde
+            over van zijn ouder. In deze demo erft een klein blokje de waarde van de wrapper.
+          </p>
+
+          <div class="inherit-wrapper">
+            <div class="pos-box inherit-parent">
+              Ouder met <code>position: relative</code>
+              <div class="inherit-child">
+                Kind met <code>position: inherit</code> → neemt dezelfde waarde over.
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <!-- fixed button -->
+    <button class="fixed-button">
+      Fixed knop
+    </button>
+  </body>
+</html>
