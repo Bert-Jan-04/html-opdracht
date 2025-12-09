@@ -10,9 +10,9 @@ def home():
 def over_mij():
     return render_template("over-mij.html")
 
-@app.route("/portfolio")
-def portfolio():
-    return render_template("portfolio.html")
+@app.route("/skills")
+def skills():
+    return render_template("skills.html")
 
 @app.route("/contact")
 def contact():
