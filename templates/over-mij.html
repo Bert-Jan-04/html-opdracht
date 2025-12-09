@@ -4,17 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Over mij - Portfolio Bert-Jan Russchen</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS uit static/css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="logo">BJ Russchen</div>
             <ul>
+                <!-- Link naar Over-mij sectie op deze pagina -->
                 <li><a href="#over-mij">Over mij</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+
+                <!-- Link terug naar de homepage, naar sections -->
+                <li><a href="{{ url_for('home') }}#skills">Skills</a></li>
+                <li><a href="{{ url_for('home') }}#portfolio">Portfolio</a></li>
+                <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -25,9 +30,10 @@
     </header>
 
     <main>
-        <!-- Intro + foto, zelfde stijl als info-block op homepage -->
+        <!-- Intro + foto -->
         <section id="over-mij" class="info-block">
-            <img src="over-mij-afbeelding.png" alt="Foto van Bert-Jan">
+            <img src="{{ url_for('static', filename='img/over-mij-afbeelding.png') }}" alt="Foto van Bert-Jan">
+
             <div>
                 <h2>Wie ben ik?</h2>
                 <p>
@@ -51,6 +57,7 @@
                 voor het eerst in aanraking met SEO. Daar merkte ik hoe groot de impact kan zijn van goede vindbaarheid 
                 op de groei van een bedrijf.
             </p>
+
             <p>
                 Later, toen ik mijn eigen fitnesssupplementenbedrijf begon, ontdekte ik pas echt hoe krachtig organisch verkeer is. 
                 Door veel te testen, te analyseren en bij te sturen, rolde ik steeds dieper het vak in. Inmiddels is SEO niet alleen 
@@ -65,6 +72,7 @@
                 Een van mijn favoriete projecten is het automatiseren van alle plaatspagina’s van 
                 <strong>kunststofkozijnen-gids.nl</strong>.
             </p>
+
             <p>
                 Door slimme workflows in <strong>n8n</strong> te bouwen, heb ik ruim 
                 <strong>1.400 pagina’s in één dag</strong> kunnen genereren. Dit project liet mij zien hoe krachtig 
@@ -77,3 +85,9 @@
             <h2>Wat ik doe</h2>
             <p>
                 Als SEO-specialist, contentmarketeer en automatiseringsspecialist help ik bedrijven om online te groeien.
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>

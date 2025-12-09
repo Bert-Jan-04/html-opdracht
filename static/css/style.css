@@ -460,3 +460,46 @@ footer {
         transform: translateY(0);
     }
 }
+
+nav a {
+  color: #000 !important;
+}
+.card-img-top {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Bij hover wordt een afbeelding groter én helderder */
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+/* Standaard wit */
+header nav a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Bij hover lichtgroen (of kies je eigen kleur) */
+header nav a:hover {
+  color: #4ade80 !important; 
+}
+.card-title a {
+  color: #0d6efd; /* bootstrap blauw */
+  transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+  color: #6610f2; /* paars/blauw hoverkleur */
+}
+.btn:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}

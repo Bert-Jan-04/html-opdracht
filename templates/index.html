@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Bert-Jan Russchen</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS uit static/css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="logo">BJ Russchen</div>
             <ul>
+                <!-- Deze linken gewoon naar secties op dezelfde pagina -->
                 <li><a href="#over-mij">Over mij</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -45,7 +47,8 @@
         </section>
 
         <section id="over-mij" class="info-block">
-            <img src="over-mij-afbeelding.png" alt="Foto van Bert-Jan">
+            <!-- Afbeelding uit static/img -->
+            <img src="{{ url_for('static', filename='img/over-mij-afbeelding.png') }}" alt="Foto van Bert-Jan">
             <div>
                 <h2>Over mij</h2>
                 <p>
@@ -53,7 +56,8 @@
                     analyseren, websites te verbeteren en nu ook meer de technische kant in te
                     duiken zodat ik beter begrijp hoe alles samenwerkt.
                 </p>
-                <a class="btn" href="over-mij.html">Leer meer over mij</a>
+                <!-- Link naar over-mij route in Flask -->
+                <a class="btn" href="{{ url_for('over_mij') }}">Leer meer over mij</a>
             </div>
         </section>
 
@@ -63,7 +67,8 @@
                 Mijn focus ligt vooral op design en SEO. Ik ben goed in HTML en CSS en ik
                 werk graag met AI. Met tools zoals n8n maak ik complete workflows om bedrijven
                 te helpen hun processen te automatiseren.
-                <a href="flex-grid.html">Opdracht 4: Flex &amp; Grid</a>
+                <!-- Link naar flex-grid opdracht via Flask-route -->
+                <a href="{{ url_for('flex_grid') }}">Opdracht 4: Flex &amp; Grid</a>
             </p>
             <div class="skills-container">
                 <div class="skill-badge">SEO</div>
@@ -149,7 +154,8 @@
         </section>
 
         <section id="contact" class="info-block">
-            <img src="afbeelding-contact.png" alt="Contact icoon">
+            <!-- Afbeelding uit static/img -->
+            <img src="{{ url_for('static', filename='img/afbeelding-contact.png') }}" alt="Contact icoon">
             <div>
                 <h2>Contact mij</h2>
                 <p>
@@ -157,7 +163,8 @@
                     Stuur me dan een bericht, dan kijk ik graag met je mee hoe we jouw site beter
                     vindbaar en efficiënter kunnen maken.
                 </p>
-                <a class="btn" href="contact.html">Get in touch</a>
+                <!-- Link naar contactpagina via Flask-route -->
+                <a class="btn" href="{{ url_for('contact') }}">Get in touch</a>
             </div>
         </section>
     </main>
